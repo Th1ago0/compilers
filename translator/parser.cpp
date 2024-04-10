@@ -27,19 +27,19 @@ void Parser::Expr()
     while (true)
     {
         // Oper -> + Term { print("+") } Oper
-        if (lookahead == "+")
+        if (lookahead == '+')
         {
-            Match("+");
+            Match('+');
 	    Term();
-            cout << "+";
-	};
+            cout << '+';
+	}
 	// Oper -> - Term { print("-") } Oper
-	else if (lookahead == "-")
+	else if (lookahead == '-')
 	{
-	    Match("-");
+	    Match('-');
 	    Term();
-	    cout << "-";
-	};
+	    cout << '-';
+	}
 	// Empty production
 	else return;
     };
@@ -52,7 +52,7 @@ void Parser::Term()
     {
         cout << lookahead;
 	Match(lookahead);
-    };
+    }
     else
     {
         throw SyntaxError{};
@@ -64,7 +64,7 @@ void Parser::Match(char t)
     if (t == lookahead)
     {
         lookahead = cin.get();
-    };
+    }
     else
     {
         throw SyntaxError{};
@@ -80,7 +80,7 @@ void Parser::Start()
 {
     lookahead = cin.get();
     Expr();
-    if (lookahead != "\n")
+    if (lookahead != '\n')
     {
         throw SyntaxError{};
     };

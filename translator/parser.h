@@ -3,14 +3,14 @@ class SyntaxError
 
 class Parser
 {
-private
+private:
   char lookahead;
 
   void Match(char t);
   void Term();
   void Expr();
 
-public
+public:
   Parser();
   void Start();
 };
