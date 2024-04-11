@@ -2,7 +2,7 @@
 #include <string>
 
 using std::string;
-using std::unordered_map
+using std::unordered_map;
 
 enum Tag {NUM=256, ID, TRUE, FALSE};
 
