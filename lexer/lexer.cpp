@@ -37,7 +37,7 @@ Token Lexer::Scan()
 	{
 	    // Converts char to int
 	    int n = peek - '0';
-	    v = 10 * n + v;
+	    v = 10 * v + n;
 	    peek = cin.get();
         }
 	while (isdigit(peek));
