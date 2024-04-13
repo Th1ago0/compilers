@@ -50,9 +50,6 @@ Token * Lexer::Scan()
         }
 	while (isdigit(peek));
 
-	// DEBUG: shows the recognized token
-	cout << "<num, " << v << "> ";
-
 	// Returns the NUM token
         token.n = Num{v};
 	return &token.n;
