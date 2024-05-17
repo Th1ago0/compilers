@@ -86,6 +86,8 @@ class Lexer:
         if self.peek == "/":
             while self.peek != "\n" and self.peek != "":
                 self.next_char()
+            if self.peek == "\n":
+                self.line += 1
             self.next_char()
             return self.scan()
         else:
