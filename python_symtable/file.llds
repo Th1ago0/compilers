@@ -1,0 +1,15 @@
+{
+    int x;
+    char y;
+    {
+        bool y;
+        x;
+        y;
+        {
+            char x;
+            x;
+        }
+    }
+    x;
+    y;
+}
